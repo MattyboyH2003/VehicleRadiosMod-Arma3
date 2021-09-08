@@ -55,11 +55,25 @@ class CfgSettings {
 };
 
 class CfgSounds{
-	class song1 
+	class Song1 
 		{
-		name = "Taylor Swift - I Knew You Were Trouble";	
-		sound[] = {"VehicleRadios\songs\Taylor Swift - I Knew You Were Trouble.wav",1,1,4,1,1,1,0};	//The 18 indicates the distance at which the sound will be heard;
-		titles[] = {};
+			name = "Taylor Swift - I Knew You Were Trouble";	
+			sound[] = {"VehicleRadios\songs\Taylor Swift - I Knew You Were Trouble.wav",1,1,4,1,1,1,0};	//The 4 indicates the distance at which the sound will be heard;
+		};
+	class Song2
+		{
+			name = "Michael Jackson - Smooth Criminal";	
+			sound[] = {"VehicleRadios\songs\Michael Jackson - Smooth Criminal.wav",1,1,4,1,1,1,0};	
+		};
+	class Song3
+		{
+			name = "Fountains of Wayne - Stacy's Mom";	
+			sound[] = {"VehicleRadios\songs\Fountains of Wayne - Stacy's Mom.wav",1,1,4,1,1,1,0};	
+		};
+	class Song4
+		{
+			name = "Payday 2 Official Soundtrack - I Will Give You My All";	
+			sound[] = {"VehicleRadios\songs\Payday 2 Official Soundtrack - I Will Give You My All.wav",1,1,4,1,1,1,0};	
 		};
 	};
 };
