@@ -1,0 +1,9 @@
+name = "VehicleRadios";
+author = "MattyboyH2003";
+logo = "logo.paa";
+logoOver = "logo.paa";
+tooltip = "mod_";
+picture = "logo.paa";
+actionName = "GitHub";
+action = "https://github.com/MattyboyH2003";
+overview = "You can listen to Taylor Swift in arma!";
