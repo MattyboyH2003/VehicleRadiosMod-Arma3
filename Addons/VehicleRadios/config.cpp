@@ -11,7 +11,7 @@ class CfgPatches
 		author[] = {"Mattyboy"};
 		url = "https://github.com/MattyboyH2003";
 		requiredVersion = 1;
-		requiredAddons[] = {"cba_main"};
+		requiredAddons[] = {"cba_main", "ace_common"};
 		units[] = {};
 		weapons[] = {};
 	};
