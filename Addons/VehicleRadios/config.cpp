@@ -37,6 +37,19 @@ class CfgFunctions
 	};
 };
 
+class CfgRemoteExec
+{
+	class Functions
+	{
+		/*
+		Operation modes:
+			0 - remote execution is blocked
+			1 - only whitelisted functions / commands are allowed
+			2 - remote execution is fully allowed, ignoring the whitelist (default, because of backward compatibility)
+		*/
+		mode = 2;
+	};
+};
 
 /*
 CfgSettings

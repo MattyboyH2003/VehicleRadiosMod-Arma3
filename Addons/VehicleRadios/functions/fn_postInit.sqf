@@ -14,7 +14,7 @@ else {
 
 soundSourceList = [];
 
-_radioOnFunc = {
+radioOnFunc = {
 	params ["_target", "_player", "_params", "_songNum"];
 	diag_log "[VehicleRadios] Playing Sound";
 
@@ -32,15 +32,17 @@ _radioOnFunc = {
 
 _callRadioOnFunc = {
 	params ["_target", "_player", "_params"];
+	diag_log "[VehicleRadios] Calling Song Start";
 
 	_songNum = [1,4] call BIS_fnc_randomInt;
 
-	[_target, _player, _params, _songNum] remoteExec ["_radioOnFunc", 0];
+	[_target, _player, _params, _songNum] remoteExec ["radioOnFunc", 0];
+	diag_log "[VehicleRadios] Called Song Start"
 };
 
 
 
-_radioOffFunc = {
+radioOffFunc = {
 
 	params ["_target", "_player", "_params"];
 	diag_log "[VehicleRadios] Stopping Sound";
@@ -59,16 +61,18 @@ _radioOffFunc = {
 
 _callRadioOffFunc = {
 	params ["_target", "_player", "_params"];
+	diag_log "[VehicleRadios] Calling Song End";
 
-	[_target, _player, _params] remoteExec ["_radioOffFunc", 0];
+	[_target, _player, _params] remoteExec ["radioOffFunc", 0];
+	diag_log "[VehicleRadios] Called Song End";
 };
 
 
 
-_radioSkipFunc = {
+radioSkipFunc = {
 
 	params ["_target", "_player", "_params", "_songNum"];
-	diag_log "[VehicleRadio] Skipping Song";
+	diag_log "[VehicleRadios] Skipping Song";
 
 	{
 		_owner = _x getVariable "Owner";
@@ -89,10 +93,12 @@ _radioSkipFunc = {
 
 _callRadioSkipFunc = {
 	params ["_target", "_player", "_params"];
+	diag_log "[VehicleRadios] Calling Song Skip";
 	
 	_songNum = [1,4] call BIS_fnc_randomInt;
 
-	[_target, _player, _params, _songNum] remoteExec ["_radioSkipFunc", 0];
+	[_target, _player, _params, _songNum] remoteExec ["radioSkipFunc", 0];
+	diag_log "[VehicleRadios] Called Song Skip"
 };
 
 _radioOn = ["radioOn", "Turn Radio On", "", _callRadioOnFunc, {!(_target getVariable ["radioOn", false])}] call ace_interact_menu_fnc_createAction; // Name, Display Name, Icon, Function, Condition
