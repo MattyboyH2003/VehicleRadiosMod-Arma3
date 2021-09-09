@@ -29,7 +29,7 @@ class CfgFunctions
 		class functions
 		{
 			file = "VehicleRadios\functions";
-			class postInitClient
+			class postInit
 			{
 				postInit = 1;
 			};
