@@ -35,7 +35,7 @@ _callRadioOnFunc = {
 
 	_songNum = [1,4] call BIS_fnc_randomInt;
 
-	[_target, _player, _params, _songNum] remoteExec "_radioOnFunc";
+	[_target, _player, _params, _songNum] remoteExec ["_radioOnFunc", 0];
 };
 
 
@@ -60,7 +60,7 @@ _radioOffFunc = {
 _callRadioOffFunc = {
 	params ["_target", "_player", "_params"];
 
-	[_target, _player, _params] remoteExec "_radioOffFunc";
+	[_target, _player, _params] remoteExec ["_radioOffFunc", 0];
 };
 
 
@@ -92,7 +92,7 @@ _callRadioSkipFunc = {
 	
 	_songNum = [1,4] call BIS_fnc_randomInt;
 
-	[_target, _player, _params, _songNum] remoteExec "_radioSkipFunc";
+	[_target, _player, _params, _songNum] remoteExec ["_radioSkipFunc", 0];
 };
 
 _radioOn = ["radioOn", "Turn Radio On", "", _callRadioOnFunc, {!(_target getVariable ["radioOn", false])}] call ace_interact_menu_fnc_createAction; // Name, Display Name, Icon, Function, Condition
