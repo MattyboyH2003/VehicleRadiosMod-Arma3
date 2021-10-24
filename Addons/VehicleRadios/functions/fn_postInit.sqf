@@ -12,6 +12,13 @@ else {
 	diag_log "[VehicleRadios] Running PostInitClient.sqf (Client)";
 };
 
+diag_log "[VehicleRadios] Building Song Library";
+
+_return = "getDirectoryFiles" callExtension ["Main", ["./Songs"]];
+
+diag_log format ["[VehicleRadios] %1 (buildSongLibrary)", _return];
+
+
 soundSourceList = [];
 
 radioOnFunc = {
@@ -125,6 +132,5 @@ onEachFrame {
 };
 
 /*
-publicVariable "variableName" // shares the specified variable with all clients
 params(array) remoteExec [functionName(string), targets(0 means all, -2 means all but server), run on jip? (boolean)]
 */

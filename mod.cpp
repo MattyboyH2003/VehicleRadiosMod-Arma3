@@ -1,8 +1,8 @@
-name = "VehicleRadios";
+name = "Vehicle Radios - Beta";
 author = "MattyboyH2003";
 logo = "logo.paa";
 logoOver = "logo.paa";
-tooltip = "Vehicle Radios";
+tooltip = "Vehicle Radios - Beta";
 picture = "picture.paa";
 actionName = "GitHub";
 action = "https://github.com/MattyboyH2003";
